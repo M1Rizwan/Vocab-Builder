@@ -28,5 +28,5 @@ Welcome to **Vocabulary Builder**, your personal companion to boost your English
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/M1Rizwan/Snake-Game.git
+   git clone https://github.com/M1Rizwan/Vocab-Builder.git
    cd vocab-builder
