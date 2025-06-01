@@ -1,13 +1,16 @@
-# This is the Main file. The main logic & UI in a single file.
+# This is the Main file. The main logic & UI in a single file written here.
 
+# Import important requirements.
 from tkinter import *
 import pandas
 from tkinter import messagebox
 
+# Load existing data into Data Frame 
 mydf = pandas.read_csv("words_bank.csv")
 words_list = [[row.word, row.meaning] for (index, row) in mydf.iterrows()]
 word_no = 0
 clicked = 1
+
 
 def hide_home_buttons():
     exsz_button.place_forget()
@@ -117,7 +120,7 @@ canvas2 = Canvas(width=290, height=337, bg="#A7D2CB", highlightthickness=0)
 logo_image2 = PhotoImage(file="img4.png")
 canvas2.create_image(150, 167, image=logo_image2)
 
-welcome_lable = Label(text="MR's  Personal  Dictionary", font=("Broadway", 20), bg="#A7D2CB", fg="#15133C")
+welcome_lable = Label(text="MR's  Vocab  Builder", font=("Broadway", 20), bg="#A7D2CB", fg="#15133C")
 welcome_lable.place(x=500, y=20)
 
 word_lable = Label(font=("arial black", 22), bg="#A7D2CB", fg="#810034")
@@ -141,4 +144,5 @@ save_button = Button(text="Save", width=10, command=save_word, bg="#414141", fg=
 search_button = Button(text="Search", width=10, command=search_word, bg="#414141", fg="#B6FFEA")
 delete_button = Button(text="Delete", width=10, command=delete_word, bg="#414141", fg="red")
 
+# Keep window open untill it is closed.
 window.mainloop()
